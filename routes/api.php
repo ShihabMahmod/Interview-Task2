@@ -14,5 +14,6 @@ use App\Http\Controllers\Api\UserController;
 |
 */
 
-Route::post('login', [UserController::class, 'login']);
+Route::get('/', [UserController::class, 'welcome']);
+Route::post('login', [UserController::class, 'login'])->name('login');
 Route::middleware('auth:api')->get('users', [UserController::class, 'index']);
