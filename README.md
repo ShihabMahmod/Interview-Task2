@@ -57,9 +57,12 @@
     php artisan migrate --seed
     ```
 
-6. Install Laravel Passport:
+6. Install Laravel JWT:
     ```sh
-    php artisan passport:install
+    composer require tymon/jwt-auth
+
+    php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
+
     ```
 
 7. Start the Laravel Echo Server:
